@@ -8,6 +8,16 @@
 }
 
 @font-face {
+    font-family: 'Futura-Bold';
+    src: url('fonts/Futura-Book Bold/Futura-Bold.woff2') format('woff2'),
+         url('fonts/Futura-Book Bold/Futura-Bold.woff') format('woff'),
+         url('fonts/Futura-Book Bold/Futura Book Bold.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'FuturaH';
     src: url('fonts/FuturaH/FuturaH.woff2') format('woff2'),
          url('fonts/FuturaH/FuturaH.ttf') format('truetype');
@@ -18,21 +28,40 @@
 
 body { 
     margin: 0; 
-    font-family: 'Futura-Book', Arial, sans-serif; 
+    font-family: 'Futura-Book', sans-serif; 
     font-size: 16px; 
     line-height: 1.5; 
-    color: #333; 
-    background-color: #f5f5f5;
+    color: #7E7E7E; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-
-
-
-/* Headings use FuturaH */
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'FuturaH', 'Futura-Book', sans-serif;
-    margin: 0 0 0.5em 0;
+.container {
+    width: 960px;
+    margin: 0 auto;
 }
-
+h1 {
+ font-family: 'Futura-Book', sans-serif;
+    margin: 0;
+    font-size: 24px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+b {
+    font-family: 'Futura-Book', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+}
+.sectionGrey {
+   background-color: #EDEDED; 
+}
+.sectionGreen {
+   background-color: #A2B32B; 
+}
+/* 
+//////////////////////////////////////// HEADER ////////////////////////////////////////
+*/
 /* 
 //////////////////// TOP MENU ////////////////////
 */
@@ -44,6 +73,7 @@ h1,h2,h3,h4,h5,h6 {
     height:fit-content;
     background: #fff;
     position: relative;
+    z-index: 1001;
 }
 /* 
 ////////// LEFT MENU //////////
@@ -86,7 +116,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .navLink {
-    font-family: 'Futura-Book', Arial, sans-serif;
+    font-family: 'Futura-Book', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
@@ -163,7 +193,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .langLink {
-    font-family: 'Futura-Book', Arial, sans-serif;
+    font-family: 'Futura-Book', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
@@ -237,24 +267,89 @@ h1,h2,h3,h4,h5,h6 {
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: transparent;
         z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: none;
     }
     
     .centerMenu.open {
         display: flex;
+        max-height: 500px;
+        animation: addShadow 0.3s ease 0.3s forwards;
     }
     
     .navMenu {
         flex-direction: column;
         width: 100%;
         gap: 0;
+        background: transparent;
+        box-shadow: none;
     }
     
     .navLink {
         width: 100%;
         justify-content: center;
         padding: 20px 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        background: #fff;
+    }
+    
+    .centerMenu.open .navLink {
+        animation: slideInLink 0.4s ease forwards;
+    }
+    
+    .centerMenu.open .navLink:nth-child(1) {
+        animation-delay: 0.05s;
+    }
+    
+    .centerMenu.open .navLink:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    
+    .centerMenu.open .navLink:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+    
+    .centerMenu.open .navLink:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+    
+    .centerMenu:not(.open):not(.closing) .navLink {
+        animation: none;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    /* Closing animation */
+    .centerMenu.closing {
+        display: flex;
+        max-height: 500px;
+    }
+    
+    .centerMenu.closing .navLink {
+        animation: slideOutLink 0.3s ease forwards;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .centerMenu.closing .navLink:nth-child(1) {
+        animation-delay: 0.15s;
+    }
+    
+    .centerMenu.closing .navLink:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+    
+    .centerMenu.closing .navLink:nth-child(3) {
+        animation-delay: 0.05s;
+    }
+    
+    .centerMenu.closing .navLink:nth-child(4) {
+        animation-delay: 0s;
     }
     
     /* Hide vertical separators on mobile */
@@ -273,6 +368,76 @@ h1,h2,h3,h4,h5,h6 {
     }
 }
 
+@keyframes slideInLink {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOutLink {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes showShadow {
+    from {
+        box-shadow: none;
+    }
+    to {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
+    }
+}
+@keyframes addShadow {
+    from {
+        box-shadow: none;
+    }
+    to {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/*
+//////////////////// SUB HEADER ////////////////////
+*/
+.subHeader {
+    width: 100%;
+    padding: 15px 0 15px 0;
+    text-align: center;
+}
+.subHeader h1 {
+    margin: 0;
+    text-transform: none;
+}
+.subHeader p {
+    margin: 0;
+    font-size: 14px;
+    font-weight:bold;
+}
+/* 
+//////////////////////////////////////// FOOTER ////////////////////////////////////////
+*/
+.footer {
+    height: 50px;
+    width: 100%;
+    background-color: #7E7E7E;
+    color: #fff;
+    font-family: 'Futura-Book', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
 @media (max-width: 349px) {
     .logoButton img {
         height: 100px;
