@@ -76,6 +76,15 @@ b {
     font-weight: bold;
     letter-spacing: 0.05rem;
 }
+a {
+    font-weight:800;
+    text-decoration: none;
+    color: #A2B32B;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #E30613;
+}
 .redText {
     color: #E30613;
     font-weight: bold;
@@ -100,6 +109,12 @@ b {
     color: white;
     font-family: 'FuturaH', sans-serif;
     font-weight: 400;
+}
+.titleGrey {
+    color: #7E7E7E;
+    font-family: 'FuturaH', sans-serif;
+    font-weight: 400;
+    margin-bottom: 1rem;
 }
 /* 
 //////////////////////////////////////// HEADER ////////////////////////////////////////
@@ -547,6 +562,31 @@ b {
     text-align: center;
 }
 /* 
+//////////////////////////////////////// LIST SECTION ////////////////////////////////////////
+*/
+.customList {
+    text-align: center;
+}
+.customList ul {
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+.customList ul li {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.customList ul li::before {
+    content: "• ";
+    margin-right: 0;
+    vertical-align: middle;
+}
+/* 
 //////////////////////////////////////// FOOTER ////////////////////////////////////////
 */
 .footer {
@@ -576,6 +616,10 @@ b {
     
     .recyclingItem {
         width: 100px;
+    }
+    
+    .customList ul {
+        font-size: 12px;
     }
 }
 
