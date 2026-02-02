@@ -1,3 +1,12 @@
+let templatesLoaded = 0;
+
+// Fonction pour vérifier si les deux templates sont chargés
+function checkAllLoaded() {
+  if (templatesLoaded === 2) {
+    document.body.classList.add('loaded');
+  }
+}
+
 // Charger le header
 fetch('templates/header.html')
   .then(response => response.text())
@@ -13,7 +22,13 @@ fetch('templates/header.html')
       );
       // Réinitialiser le burger après le chargement du header
       initBurger();
+      // Initialiser les listeners de langue après le chargement du header
+      if (typeof initLanguageListeners === 'function') {
+        initLanguageListeners();
+      }
     }
+    templatesLoaded++;
+    checkAllLoaded();
   });
 
 // Charger le footer
@@ -30,6 +45,8 @@ fetch('templates/footer.html')
         contentEndComment.nextSibling
       );
     }
+    templatesLoaded++;
+    checkAllLoaded();
   });
 
 // Fonction pour initialiser le burger

@@ -9,6 +9,15 @@ html, body {
     width: 100%;
 }
 
+body {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
 @font-face {
     font-family: 'Futura-Book';
     src: url('fonts/Futura-Book/Futura-Book.woff2') format('woff2'),
@@ -280,6 +289,11 @@ a:hover {
     bottom: 1px;
     width: 1px;
     background-color: #7E7E7E;
+}
+
+/* Masquer le séparateur du dernier lien visible */
+.langLink.last-visible::before {
+    display: none;
 }
 /* BURGER MENU */
 .burgerBtn {
