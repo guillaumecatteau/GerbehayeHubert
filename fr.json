@@ -46,15 +46,11 @@
     },
     {
       "id": "h5",
-      "content": "Depuis plus de 25 ans, <span class=\"redText\">Gerbehaye Recycling</span> met son expertise à votre service dans les secteurs du broyage, du recyclage et du compactage de vos déchets, mais aussi de la destruction de vos documents."
+      "content": "Depuis plus de 25 ans, <span class=\"redText\">Gerbehaye Hubert</span> met son expertise à votre service dans les secteurs du broyage, du recyclage et du compactage de vos déchets, mais aussi de la destruction de vos documents."
     },
     {
       "id": "h6",
       "content": "Notre savoir-faire ? Des machines et des installations complètes que nous vous fournissons clé en main pour réduire vos coûts logistiques et valoriser vos déchets. Analyse de vos besoins, conception, installation, maintenance et service après-vente : nous vous proposons en Belgique et à l'étranger des solutions sur mesure en prenant tous vos besoins en charge, pour une efficacité et une fiabilité maximales !"
-    },
-    {
-      "id": "h7",
-      "content": "Installateurs électriciens et entrepreneurs agréés, certification ISO 9001-2008... Nous mettons toujours l'accent sur l'excellence !"
     },
     {
       "id": "h8",
@@ -95,6 +91,30 @@
     {
       "id": "h17",
       "content": "Envie de découvrir nos solutions et notre savoir-faire ? <a href=\"#\">Nous sommes à votre service !</a>"
+    },
+    {
+      "id": "p1",
+      "content": "Presses"
+    },
+    {
+      "id": "p2",
+      "content": "Les presses sont les machines servant au compactage de tout type de matériaux."
+    },
+    {
+      "id": "p3",
+      "content": "Presse à balles verticale"
+    },
+    {
+      "id": "p4",
+      "content": "Presse à chambres multiples"
+    },
+    {
+      "id": "p5",
+      "content": "Presse à balles horizontale"
+    },
+    {
+      "id": "p6",
+      "content": "Presse à canaux automatique"
     }
   ]
 }

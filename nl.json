@@ -46,15 +46,11 @@
     },
     {
       "id": "h5",
-      "content": "Al meer dan 25 jaar zet <span class=\"redText\">Gerbehaye Recycling</span> zijn expertise in voor u in de sectoren van het vermalen, recycleren en compacteren van uw afval, maar ook van de vernietiging van uw documenten."
+      "content": "Al meer dan 25 jaar zet <span class=\"redText\">Gerbehaye Hubert</span> zijn expertise in voor u in de sectoren van het vermalen, recycleren en compacteren van uw afval, maar ook van de vernietiging van uw documenten."
     },
     {
       "id": "h6",
       "content": "Onze kennis van zaken? We leveren u machines en volledige installaties perfect gebruiksklaar. Daarmee drukt u uw logistieke kosten en krijgt uw afval een meerwaarde. We analyseren uw behoeften, maken een ontwerp, installeren, geven opleiding en onderhouden uw apparatuur. In België en in het buitenland stellen we u maatoplossingen voor die rekening houden met uw noden. Het resultaat? Maximale efficiëntie en betrouwbaarheid!"
-    },
-    {
-      "id": "h7",
-      "content": "Als erkende elektriciteitsinstallateurs en ondernemers hebben we het ISO-certificaat 9001-2008... We leggen altijd de nadruk op uitmuntendheid!"
     },
     {
       "id": "h8",
@@ -95,6 +91,30 @@
     {
       "id": "h17",
       "content": "Met onze expertise hebben we een antwoord op de meest gespecialiseerde vragen. Wilt u onze expertise en kennis van zaken beter leren kennen? <a href=\"#\">Wij staan voor u klaar !</a>"
+    },
+    {
+      "id": "p1",
+      "content": "Persen"
+    },
+    {
+      "id": "p2",
+      "content": "Persen zijn machines die worden gebruikt voor het verdichten van alle soorten materialen."
+    },
+    {
+      "id": "p3",
+      "content": "Verticale balenpers"
+    },
+    {
+      "id": "p4",
+      "content": "Multi-kamerpers pers"
+    },
+    {
+      "id": "p5",
+      "content": "Horizontale balenpers"
+    },
+    {
+      "id": "p6",
+      "content": "Automatische kanaalbalenpers"
     }
   ]
 }
