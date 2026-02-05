@@ -22,6 +22,8 @@ fetch('templates/header.html')
       );
       // Réinitialiser le burger après le chargement du header
       initBurger();
+      // Initialiser le lien actif en fonction de la page
+      setActiveNavLink();
       // Initialiser les listeners de langue après le chargement du header
       if (typeof initLanguageListeners === 'function') {
         initLanguageListeners();
@@ -84,5 +86,21 @@ function initBurger() {
         }, 600);
       }
     });
+  });
+}
+
+// Fonction pour définir le lien actif en fonction de la page visitée
+function setActiveNavLink() {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.navLink');
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+    
+    // Vérifier si le lien correspond à la page actuelle
+    if ((currentPage === 'index.html' && href === '#') || currentPage === href) {
+      link.classList.add('active');
+    }
   });
 }
