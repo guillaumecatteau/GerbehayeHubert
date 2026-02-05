@@ -66,19 +66,19 @@
     },
     {
       "id": "h11",
-      "content": "des presses à <a href=\"#\">balles manuelles</a> et <a href=\"#\">hydrauliques</a>"
+      "content": "des presses à <a href=\"presses.html\">balles manuelles</a> et <a href=\"presses.html\">hydrauliques</a>"
     },
     {
       "id": "h12",
-      "content": "des <a href=\"#\">presses à briquettes</a>"
+      "content": "des <a href=\"presses.html\">presses à briquettes</a>"
     },
     {
       "id": "h13",
-      "content": "des <a href=\"#\">compacteurs à déchets</a>"
+      "content": "des <a href=\"presses.html\">compacteurs à déchets</a>"
     },
     {
       "id": "h14",
-      "content": "des <a href=\"#\">broyeurs</a>"
+      "content": "des <a href=\"shredders.html\">broyeurs</a>"
     },
     {
       "id": "h15",
@@ -86,11 +86,11 @@
     },
     {
       "id": "h16",
-      "content": "Nous vous proposons des solutions pour <a href=\"#\">détruire vos documents</a> : broyeurs, destructeurs ou encore installations complètes et sur mesure. Archives, documents confidentiels, microfilms et microfiches, cartes bancaires, matériel électronique, bandes magnétiques… Notre expertise permet de répondre à vos exigences les plus pointues !"
+      "content": "Nous vous proposons des solutions pour <a href=\"shredders.html\">détruire vos documents</a> : broyeurs, destructeurs ou encore installations complètes et sur mesure. Archives, documents confidentiels, microfilms et microfiches, cartes bancaires, matériel électronique, bandes magnétiques… Notre expertise permet de répondre à vos exigences les plus pointues !"
     },
     {
       "id": "h17",
-      "content": "Envie de découvrir nos solutions et notre savoir-faire ? <a href=\"#\">Nous sommes à votre service !</a>"
+      "content": "Envie de découvrir nos solutions et notre savoir-faire ? <a href=\"contact.html\">Nous sommes à votre service !</a>"
     },
     {
       "id": "p1",
@@ -115,6 +115,134 @@
     {
       "id": "p6",
       "content": "Presse à canaux automatique"
+    },
+    {
+      "id": "p7",
+      "content": "Presse à briquettes"
+    },
+    {
+      "id": "s1",
+      "content": "Broyeurs"
+    },
+    {
+      "id": "s2",
+      "content": "Broyeurs pour tout type de matériaux."
+    },
+    {
+      "id": "s3",
+      "content": "Broyeur à quatre arbres"
+    },
+    {
+      "id": "c1",
+      "content": "Comment nous joindre ?"
+    },
+    {
+      "id": "successMessage",
+      "content": "Merci ! Votre message a été envoyé avec succès."
+    },
+    {
+      "id": "errorFormMessage",
+      "content": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+    },
+    {
+      "id": "c2",
+      "content": "Prénom"
+    },
+    {
+      "id": "c3",
+      "content": "Nom"
+    },
+    {
+      "id": "c4",
+      "content": "Entreprise"
+    },
+    {
+      "id": "c5",
+      "content": "Fonction"
+    },
+    {
+      "id": "c6",
+      "content": "Adresse email"
+    },
+    {
+      "id": "c7",
+      "content": "Téléphone"
+    },
+    {
+      "id": "c8",
+      "content": "Site web"
+    },
+    {
+      "id": "c9",
+      "content": "Message"
+    },
+    {
+      "id": "submitBtn",
+      "content": "Envoyer"
+    },
+    {
+      "id": "formError_firstName",
+      "content": "Le prénom doit contenir au moins 2 caractères"
+    },
+    {
+      "id": "formError_lastName",
+      "content": "Le nom doit contenir au moins 2 caractères"
+    },
+    {
+      "id": "formError_company",
+      "content": "Veuillez entrer un nom d'entreprise"
+    },
+    {
+      "id": "formError_position",
+      "content": "Veuillez entrer votre fonction"
+    },
+    {
+      "id": "formError_email",
+      "content": "Veuillez entrer une adresse email valide"
+    },
+    {
+      "id": "formError_phone",
+      "content": "Veuillez entrer un numéro de téléphone valide"
+    },
+    {
+      "id": "formError_website",
+      "content": "Veuillez entrer une URL valide"
+    },
+    {
+      "id": "formError_message",
+      "content": "Veuillez entrer un message"
+    },
+    {
+      "id": "c10",
+      "content": "Atelier et bureaux"
+    },
+    {
+      "id": "c11",
+      "content": "Rue Germaine Devalet 44<br />7500 TOURNAI<br />BELGIQUE"
+    },
+    {
+      "id": "c12",
+      "content": "Téléphone : +32 (0)2 351 00 38<br />Fax : +32 (0)2 351 17 52<br />Mobile : +32 (0)475 474 474"
+    },
+    {
+      "id": "c13",
+      "content": "Email : <a href=\"mailto:info.gr@skynet.be\">info.gr@skynet.be</a>"
+    },
+    {
+      "id": "c14",
+      "content": "Siège social"
+    },
+    {
+      "id": "c15",
+      "content": "Avenue Adolphe Buyl 162<br />1050 BRUXELLES<br />BELGIQUE"
+    },
+    {
+      "id": "c16",
+      "content": "Envoyez-nous un message"
+    },
+    {
+      "id": "c17",
+      "content": "L'entreprise"
     }
   ]
 }

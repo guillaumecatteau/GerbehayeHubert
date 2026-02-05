@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Gerbehaye Hubert</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- content start -->
+    <!-- banner top -->
+    <div class="sectionGreenProduct">
+      <div class="container">
+        <h1 class="titleWhite title">Contact</h1>
+        <p class="textEnd" id="c1">Get in touch with us</p>
+      </div>
+    </div>
+    <!-- Location -->
+    <div class="sectionGrey">
+      <h1 class="titleGrey title" id="c17">The company</h1>
+      <div class="containerLocation"> 
+        <div>
+          <h1 class="titleGrey" id="c10">Workshop and offices</h1>
+          <p id="c11">44 Germaine Devalet Street<br />7500 TOURNAI<br />BELGIUM</p>
+          <p id="c12">
+            Telephone : +32 (0)2 351 00 38<br />Fax : +32 (0)2 351 17 52<br />Mobile
+            : +32 (0)475 474 474
+          </p>
+          <p class="textEnd" id="c13">
+            Email : <a href="mailto:info.gr@skynet.be">info.gr@skynet.be</a>
+          </p>
+        </div>
+        <div>
+          <h1 class="titleGrey" id="c14">Head office</h1>
+          <p class="textEnd" id="c15">162 Adolphe Buyl Avenue<br />1050 BRUXELLES<br />BELGIUM</p>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Form Section -->
+    <div class="contactSection">
+      <div class="container">
+        <h1 class="titleGrey title" id="c16">Send us a message</h1>
+        <form
+          class="contactForm"
+          id="contactForm"
+          method="POST"
+          action="contact.php"
+          novalidate
+        >
+          <div class="successMessage" id="successMessage">
+            Thank you! Your message has been sent successfully.
+          </div>
+          <div class="errorFormMessage" id="errorFormMessage">
+            An error occurred while sending your message. Please try again.
+          </div>
+          <div class="formGroup row">
+            <div class="formGroup">
+              <label for="firstName" id="c2">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                data-min-length="2"
+              />
+              <div class="errorMessage" id="firstNameError"></div>
+              <div class="validationIcon" id="firstNameIcon">✓</div>
+            </div>
+            <div class="formGroup">
+              <label for="lastName" id="c3">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                data-min-length="2"
+              />
+              <div class="errorMessage" id="lastNameError"></div>
+              <div class="validationIcon" id="lastNameIcon">✓</div>
+            </div>
+          </div>
+
+          <div class="formGroup row">
+            <div class="formGroup">
+              <label for="company" id="c4">Company</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                data-min-length="1"
+              />
+              <div class="errorMessage" id="companyError"></div>
+              <div class="validationIcon" id="companyIcon">✓</div>
+            </div>
+            <div class="formGroup">
+              <label for="position" id="c5">Position</label>
+              <input
+                type="text"
+                id="position"
+                name="position"
+                data-min-length="1"
+              />
+              <div class="errorMessage" id="positionError"></div>
+              <div class="validationIcon" id="positionIcon">✓</div>
+            </div>
+          </div>
+
+          <div class="formGroup row">
+            <div class="formGroup">
+              <label for="email" id="c6">Email</label>
+              <input type="email" id="email" name="email" data-type="email" />
+              <div class="errorMessage" id="emailError"></div>
+              <div class="validationIcon" id="emailIcon">✓</div>
+            </div>
+            <div class="formGroup">
+              <label for="phone" id="c7">Phone</label>
+              <input type="tel" id="phone" name="phone" data-min-length="1" />
+              <div class="errorMessage" id="phoneError"></div>
+              <div class="validationIcon" id="phoneIcon">✓</div>
+            </div>
+          </div>
+
+          <div class="formGroup">
+            <label for="website" id="c8">Website</label>
+            <input type="url" id="website" name="website" data-min-length="1" />
+            <div class="errorMessage" id="websiteError"></div>
+            <div class="validationIcon" id="websiteIcon">✓</div>
+          </div>
+
+          <div class="formGroup">
+            <label for="message" id="c9">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              data-min-length="1"
+            ></textarea>
+            <div class="errorMessage" id="messageError"></div>
+            <div class="validationIcon" id="messageIcon">✓</div>
+          </div>
+
+          <button type="submit" class="submitBtn" id="submitBtn" disabled>
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- content end -->
+    <script src="responsive.js"></script>
+    <script src="init.js"></script>
+    <script src="multilingual.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

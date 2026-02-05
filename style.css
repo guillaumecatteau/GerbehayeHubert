@@ -1,3 +1,4 @@
+/* ========== RESET & BASE STYLES ========== */
 * {
     box-sizing: border-box;
 }
@@ -12,6 +13,15 @@ html, body {
 body {
     opacity: 0;
     transition: opacity 0.3s ease;
+    margin: 0; 
+    font-family: 'Futura-Book', sans-serif; 
+    font-size: 16px; 
+    line-height: 1.5; 
+    color: #7E7E7E; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body.loaded {
@@ -63,11 +73,24 @@ body {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-   justify-content: center;
+    justify-content: center;
     align-items: center;
 }
+
+.containerLocation {
+    width: 960px;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: center;
+}
+
+.containerLocation > div {
+    text-align: center;
+}
 h1 {
- font-family: 'Futura-Book', sans-serif;
+    font-family: 'Futura-Book', sans-serif;
     margin: 0;
     font-size: 24px;
     font-weight: bolder;
@@ -75,96 +98,106 @@ h1 {
     text-align: center;
     line-height: normal;
 }
+
 p {
     margin: 0 0 1rem 0;
     font-size: 16px;
     text-align: center;
 }
-.sectionGreenProduct p {
-    color: white;
-}
+
 b {
     font-family: 'Futura-Book', sans-serif;
     font-weight: bold;
     letter-spacing: 0.05rem;
 }
+
 a {
-    font-weight:800;
+    font-weight: 800;
     text-decoration: none;
     color: #A2B32B;
     transition: color 0.2s ease;
 }
+
 a:hover {
     color: #E30613;
 }
+
+.sectionGreenProduct p {
+    color: white;
+}
+
 .redText {
     color: #E30613;
     font-weight: bold;
 }
+
 .textEnd {
     margin-bottom: 0;
 }
+/* ========== SECTION STYLING ========== */
 .sectionWhite {
    background-color: white;
-      padding:4rem 0; 
+   padding: 4rem 0;
 }
+
 .sectionGrey {
    background-color: #EDEDED;
    padding: 4rem 0;
    width: 100%;
 }
+
 .sectionGreen {
    background-color: #A2B32B;
-   padding:4rem 0; 
+   padding: 4rem 0;
 }
+
 .sectionGreenProduct {
    background-color: #A2B32B;
-   padding:2rem 0; 
+   padding: 2rem 0;
 }
+
+/* ========== TYPOGRAPHY ========== */
 .title {
     font-size: 30px;
 }
+
 .productTitle {
     font-size: 30px;
     margin: 0 !important;
 }
+
 .titleWhite {
     color: white;
     font-family: 'FuturaH', sans-serif;
     font-weight: 400;
 }
+
 .titleGrey {
     color: #7E7E7E;
     font-family: 'FuturaH', sans-serif;
     font-weight: 400;
     margin-bottom: 1rem;
 }
-/* 
-//////////////////////////////////////// HEADER ////////////////////////////////////////
-*/
-/* 
-//////////////////// TOP MENU ////////////////////
-*/
+/* ========== HEADER - TOP MENU ========== */
 .topMenu {
     display: grid;
     grid-template-columns: 220px 1fr 220px;
     grid-template-areas: "leftMenu centerMenu rightMenu";
     width: 100%;
-    height:fit-content;
+    height: fit-content;
     background: #fff;
     position: relative;
     z-index: 1001;
 }
-/* 
-////////// LEFT MENU //////////
-*/
 
+/* LEFT MENU */
 .leftMenu {
     grid-area: leftMenu;
     display: flex;
     align-items: flex-start;
-    padding : 20px;
+    padding: 20px;
 }
+
 .logoButton {
     background: transparent;
     border: 0;
@@ -174,14 +207,14 @@ a:hover {
     display: inline-flex;
     align-items: center;
 }
+
 .logoButton img {
     height: 120px;
     width: auto;
     display: block;
 }
-/* 
-////////// CENTER MENU //////////
-*/
+
+/* CENTER MENU */
 .centerMenu {
     grid-area: centerMenu;
     display: flex;
@@ -218,7 +251,6 @@ a:hover {
     cursor: default;
 }
 
-/* Vertical separator between links - only text height */
 .navLink:not(:last-child)::before {
     content: '';
     position: absolute;
@@ -229,7 +261,6 @@ a:hover {
     background-color: #7E7E7E;
 }
 
-/* Underline indicator below each link */
 .navLink::after {
     content: '';
     position: absolute;
@@ -241,16 +272,12 @@ a:hover {
     transition: background-color 0.2s ease;
 }
 
-.navLink.active::after {
-    background-color: #E30613;
-}
-
+.navLink.active::after,
 .navLink:hover::after {
     background-color: #E30613;
 }
-/* 
-////////// RIGHT MENU //////////
-*/
+
+/* RIGHT MENU */
 .rightMenu {
     grid-area: rightMenu;
     display: flex;
@@ -258,6 +285,7 @@ a:hover {
     justify-content: space-between;
     align-items: flex-end;
 }
+
 /* LANGUAGE SELECTOR */
 .languageSelector {
     display: flex;
@@ -294,7 +322,6 @@ a:hover {
     display: none;
 }
 
-/* Vertical separator between language links */
 .langLink:not(:last-child)::before {
     content: '';
     position: absolute;
@@ -305,14 +332,14 @@ a:hover {
     background-color: #7E7E7E;
 }
 
-/* Masquer le séparateur du dernier lien visible */
 .langLink.last-visible::before {
     display: none;
 }
+
 /* BURGER MENU */
 .burgerBtn {
     background: transparent;
-    height:fit-content;
+    height: fit-content;
     border: 0;
     padding: 20px;
     margin: 0;
@@ -336,9 +363,10 @@ a:hover {
     width: auto;
 }
 
-/* RESPONSIVE */
-@media (max-width: 960px) {
-    .container {
+/* ========== RESPONSIVE - HEADER ========== */
+@media (max-width: 1099px) {
+    .container,
+    .containerLocation {
         width: 80vw;
     }
 }
@@ -524,29 +552,160 @@ a:hover {
     }
 }
 
-/*
-//////////////////// SUB HEADER ////////////////////
-*/
+/* ========== RESPONSIVE - HEADER ========== */
+@media (max-width: 1099px) {
+    .container,
+    .containerLocation {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 999px) {
+    .topMenu {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "leftMenu rightMenu"
+                             "centerMenu centerMenu";
+    }
+}
+
+@media (max-width: 529px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .sectionGreen {
+        padding: 2rem 0;
+    }
+    
+    .iconRoundGroup {
+        transform: scale(0.8);
+    }
+    
+    .sectionWhite,
+    .sectionGrey {
+        padding: 3rem 0;
+    }
+    
+    .recyclingGroup {
+        gap: 0rem !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    .recyclingItem {
+        width: 120px;
+    }
+    
+    .centerMenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: transparent;
+        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        box-shadow: none;
+    }
+    
+    .centerMenu.open {
+        display: flex;
+        max-height: 500px;
+        animation: addShadow 0.3s ease 0.3s forwards;
+    }
+    
+    .navMenu {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    .navLink {
+        width: 100%;
+        justify-content: center;
+        padding: 20px 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        background: #fff;
+    }
+    
+    .centerMenu.open .navLink {
+        animation: slideInLink 0.4s ease forwards;
+    }
+    
+    .centerMenu.open .navLink:nth-child(1) { animation-delay: 0.05s; }
+    .centerMenu.open .navLink:nth-child(2) { animation-delay: 0.1s; }
+    .centerMenu.open .navLink:nth-child(3) { animation-delay: 0.15s; }
+    .centerMenu.open .navLink:nth-child(4) { animation-delay: 0.2s; }
+    
+    .centerMenu:not(.open):not(.closing) .navLink {
+        animation: none;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    .centerMenu.closing {
+        display: flex;
+        max-height: 500px;
+    }
+    
+    .centerMenu.closing .navLink {
+        animation: slideOutLink 0.3s ease forwards;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .centerMenu.closing .navLink:nth-child(1) { animation-delay: 0.15s; }
+    .centerMenu.closing .navLink:nth-child(2) { animation-delay: 0.1s; }
+    .centerMenu.closing .navLink:nth-child(3) { animation-delay: 0.05s; }
+    .centerMenu.closing .navLink:nth-child(4) { animation-delay: 0s; }
+    
+    .navLink:not(:last-child)::before {
+        display: none;
+    }
+    
+    .navLink::after {
+        left: 0;
+        right: 0;
+    }
+    
+    .burgerBtn {
+        display: inline-flex;
+    }
+}
+
+/* ========== SUB HEADER ========== */
 .subHeader {
-    padding: 15px 0 15px 0;
+    padding: 15px 0;
     text-align: center;
 }
+
 .mainTitle {
     line-height: 1rem;
     margin-bottom: 0.5rem !important;
 }
+
 .subHeader h1 {
     margin: 0;
     text-transform: none;
 }
+
 .subHeader p {
     margin: 0;
     font-size: 14px;
-    font-weight:bold;
+    font-weight: bold;
 }
-/* 
-//////////////////////////////////////// RECYCLING GROUP ////////////////////////////////////////
-*/
+
+/* ========== RECYCLING GROUP ========== */
+
 .recyclingGroup {
     display: flex;
     flex-direction: row;
@@ -554,6 +713,7 @@ a:hover {
     gap: 2rem;
     margin-top: 20px;
 }
+
 .recyclingItem {
     display: flex;
     flex-direction: column;
@@ -561,6 +721,7 @@ a:hover {
     text-align: center;
     width: 140px;
 }
+
 .iconRoundGroup {
     width: 80px;
     height: 80px;
@@ -570,37 +731,39 @@ a:hover {
     align-items: center;
     background-color: #ffffff;
 }
+
 .iconRoundGroup img,
 .iconRoundGroup svg {
     width: auto;
     height: 50px;
     color: #A2B32B;
 }
-/* 
-//////////////////////////////////////// LOGO SECTION ////////////////////////////////////////
-*/
+
+/* ========== LOGO SECTION ========== */
+.logosGroup {
+    margin-top: 1rem;
+    text-align: center;
+}
+
 .logosGroup img {
     height: 36px;
     width: auto;
     margin: 0 0.5rem;
     display: inline-block;
 }
-.logosGroup {
-    margin-top: 1rem;
-    text-align: center;
-}
-/* 
-//////////////////////////////////////// LIST SECTION ////////////////////////////////////////
-*/
+
+/* ========== LIST SECTION ========== */
 .customList {
     text-align: center;
 }
+
 .customList ul {
     display: inline-block;
     text-align: center;
     padding: 0;
     margin: 1rem 0 0 0;
 }
+
 .customList ul li {
     text-align: center;
     list-style: none;
@@ -614,9 +777,7 @@ a:hover {
     margin-right: 0;
     vertical-align: middle;
 }
-/* 
-//////////////////////////////////////// FOOTER ////////////////////////////////////////
-*/
+/* ========== FOOTER ========== */
 .footer {
     height: 50px;
     width: 100%;
@@ -671,6 +832,23 @@ a:hover {
     margin-top: 2rem;
 }
 
+/* Layout Solo: Single image centered */
+.imageGridLayoutSolo {
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    max-width: min(960px, 80vw);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.imageGridLayoutSolo img {
+    max-height: 480px;
+    min-height: clamp(280px, 50vw, 480px);
+    width: auto;
+    margin: 0 auto;
+    justify-self: center;
+}
+
 /* Layout 1: Large image left, 2 images stacked right */
 .imageGridLayoutA {
     grid-template-columns: max-content var(--gridSquareSize);
@@ -694,6 +872,12 @@ a:hover {
 
 .imageGridLayoutC:has(.gridItemSmall) {
     grid-template-rows: max-content var(--gridSmallSize);
+}
+
+/* Layout 4: Large top-left, medium bottom-left, four small on right */
+.imageGridLayoutD {
+    grid-template-columns: max-content var(--gridSquareSize) var(--gridSquareSize);
+    grid-template-rows: var(--gridSquareSize) var(--gridSquareSize);
 }
 
 .imageGridLayoutA .gridItemLarge {
@@ -758,6 +942,42 @@ a:hover {
     grid-row: 2;
 }
 
+.imageGridLayoutD .gridItemLarge {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    max-width: calc(960px - (var(--gridSquareSize) * 2) - (var(--gridGap) * 2));
+}
+
+.imageGridLayoutD .gridItemSmall {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.imageGridLayoutD .gridItemSmall:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.imageGridLayoutD .gridItemSmall:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.imageGridLayoutD .gridItemSmall:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.imageGridLayoutD .gridItemSmall:nth-child(5) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
 .imageGridContainer img {
     width: 100%;
     height: 100%;
@@ -782,6 +1002,13 @@ a:hover {
     justify-self: start;
 }
 
+.imageGridLayoutA .gridItemLarge.imageFitWidth {
+    max-width: calc(960px - var(--gridSquareSize) - var(--gridGap));
+    max-height: 480px;
+    width: auto;
+    height: 100%;
+}
+
 .imageGridContainer img.imageFitHeight {
     width: auto;
     height: 100%;
@@ -804,18 +1031,42 @@ a:hover {
         max-width: calc((960px - 240px - 2rem) * var(--scaleFactor));
     }
 
+    .imageGridLayoutD .gridItemLarge {
+        max-width: calc(min(960px, 80vw) - (var(--gridSquareSize) * 2) - (var(--gridGap) * 2));
+    }
+
+    .imageGridLayoutSolo img {
+        max-height: 480px;
+        min-height: clamp(280px, 50vw, 480px);
+        max-width: calc(min(960px, 80vw) - 2px);
+    }
+
+    .imageGridLayoutA .gridItemLarge.imageFitWidth {
+        max-width: calc((min(960px, 80vw) - var(--gridSquareSize) - var(--gridGap)));
+        max-height: 480px;
+        width: auto;
+        height: 100%;
+    }
+
+    .imageGridLayoutA .gridItemLarge.imageFitHeight {
+        max-width: calc((min(960px, 80vw) - var(--gridSquareSize) - var(--gridGap)));
+        max-height: 480px;
+    }
+
     .imageGridLayoutB img.gridItemLarge {
         max-width: calc(((960px - 2rem) / 2) * var(--scaleFactor));
         max-height: calc(480px * var(--scaleFactor));
     }
 
     .imageGridLayoutC {
-        --gridSmallSize: calc(((960px - (2rem * 3)) / 4) * var(--scaleFactor));
-        max-width: 100%;
+        --gridSmallSize: calc((min(960px, 80vw) - (var(--gridGap) * 3)) / 4);
+        grid-template-columns: repeat(4, var(--gridSmallSize));
+        max-width: min(960px, 80vw);
     }
 
     .imageGridLayoutC .gridItemLarge {
-        max-width: calc(960px * var(--scaleFactor));
+        max-width: min(960px, 80vw);
+        width: 100%;
     }
 }
 
@@ -835,6 +1086,12 @@ a:hover {
         margin: 0 auto;
     }
 
+    .imageGridLayoutA .gridItemLarge.imageFitWidth {
+        width: 100%;
+        height: auto;
+        max-width: calc(80vw - 2px);
+    }
+
     .imageGridLayoutA .gridItemSmall:nth-child(2) {
         grid-column: 1;
         grid-row: 2;
@@ -845,6 +1102,12 @@ a:hover {
         grid-column: 2;
         grid-row: 2;
         max-width: calc((80vw - var(--gridGap)) / 2);
+    }
+
+    /* Layout Solo: Centered image */
+    .imageGridLayoutSolo img {
+        max-width: calc(80vw - 2px);
+        max-height: 420px;
     }
 
     /* Layout B: Images stacked vertically */
@@ -865,9 +1128,14 @@ a:hover {
     .imageGridLayoutC {
         --gridSmallSize: calc((80vw - (var(--gridGap) * 1)) / 2);
         grid-template-columns: repeat(2, var(--gridSmallSize));
+        grid-template-rows: max-content 0;
+        grid-auto-rows: 0;
+        max-width: 80vw;
+    }
+
+    .imageGridLayoutC:has(.gridItemSmall) {
         grid-template-rows: max-content var(--gridSmallSize);
         grid-auto-rows: var(--gridSmallSize);
-        max-width: 80vw;
     }
 
     .imageGridLayoutC .gridItemLarge {
@@ -895,5 +1163,241 @@ a:hover {
     .imageGridLayoutC .gridItemSmall:nth-child(5) {
         grid-column: 2;
         grid-row: 3;
+    }
+
+    /* Layout D: Large image on top, 4 small images in 2x2 below */
+    .imageGridLayoutD {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: max-content max-content max-content;
+    }
+
+    .imageGridLayoutD .gridItemLarge {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        max-width: calc(80vw - 2px);
+        max-height: 420px;
+        margin: 0 auto;
+    }
+
+    .imageGridLayoutD .gridItemSmall:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        max-width: calc((80vw - var(--gridGap)) / 2);
+    }
+
+    .imageGridLayoutD .gridItemSmall:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+        max-width: calc((80vw - var(--gridGap)) / 2);
+    }
+
+    .imageGridLayoutD .gridItemSmall:nth-child(4) {
+        grid-column: 1;
+        grid-row: 3;
+        max-width: calc((80vw - var(--gridGap)) / 2);
+    }
+
+    .imageGridLayoutD .gridItemSmall:nth-child(5) {
+        grid-column: 2;
+        grid-row: 3;
+        max-width: calc((80vw - var(--gridGap)) / 2);
+    }
+}
+
+/* 
+//////////////////////////////////////// CONTACT FORM ////////////////////////////////////////
+*/
+
+.contactSection {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.contactForm {
+    width: 100%;
+    max-width: 100%;
+    margin: 2rem 0 0 0;
+    padding: 0;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.formGroup.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.formGroup.row .formGroup {
+    margin-bottom: 0;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #7E7E7E;
+    font-family: 'Futura-Book', sans-serif;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.formGroup:has(input:focus) label,
+.formGroup:has(textarea:focus) label {
+    color: #A2B32B;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.75rem;
+    padding-right: 3rem;
+    font-family: 'Futura-Book', sans-serif;
+    font-size: 14px;
+    border: 2px solid #CCCCCC;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+    text-transform: uppercase;
+    background-color: #EDEDED;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #A2B32B;
+}
+
+.formGroup textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.errorMessage {
+    color: #E30613;
+    font-size: 12px;
+    margin-top: 0.25rem;
+    font-family: 'Futura-Book', sans-serif;
+    height: 1rem;
+    visibility: hidden;
+}
+
+.errorMessage.show {
+    visibility: visible;
+}
+
+.validationIcon {
+    position: absolute;
+    right: -1.5rem;
+    top: calc(1.3125rem + 0.5rem + 0.75rem + 0.65625rem);
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #A2B32B;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.validationIcon.show {
+    display: flex;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-family: 'Futura-Book', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    max-width: 400px;
+}
+
+.submitBtn:disabled {
+    background-color: #7E7E7E;
+    color: white;
+    cursor: not-allowed;
+}
+
+.submitBtn:not(:disabled) {
+    background-color: #A2B32B;
+    color: white;
+}
+
+.submitBtn:not(:disabled):hover {
+    background-color: #E30613;
+}
+
+.successMessage {
+    display: none;
+    background-color: #A2B32B;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Futura-Book', sans-serif;
+}
+
+.successMessage.show {
+    display: block;
+}
+
+.errorFormMessage {
+    display: none;
+    background-color: #E30613;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Futura-Book', sans-serif;
+}
+
+.errorFormMessage.show {
+    display: block;
+}
+
+@media (max-width: 1099px) {
+    .formGroup input,
+    .formGroup textarea {
+        padding-right: 2.5rem;
+    }
+
+    .formGroup label {
+        font-size: 13px;
+        margin-bottom: 0.4rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .containerLocation {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .formGroup.row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contactForm {
+        padding: 1rem;
     }
 }

@@ -1,12 +1,12 @@
 // Système multilingue
-let currentLanguage = 'EN';
-const translations = {};
+window.currentLanguage = 'EN';
+window.translations = {};
 
 // Charger les traductions au démarrage
 async function loadTranslations(lang) {
   if (lang === 'EN') {
     // Pour l'anglais, on restaure l'état initial
-    translations[lang] = null;
+    window.translations[lang] = null;
     return;
   }
 
@@ -15,11 +15,11 @@ async function loadTranslations(lang) {
     const response = await fetch(file);
     if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
     const data = await response.json();
-    translations[lang] = {};
+    window.translations[lang] = {};
     
     // Créer un objet clé-valeur pour les traductions
     data.translations.forEach(item => {
-      translations[lang][item.id] = item.content;
+      window.translations[lang][item.id] = item.content;
     });
   } catch (error) {
     console.error(`Erreur lors du chargement de ${file}:`, error);
@@ -34,15 +34,15 @@ function applyTranslations(lang) {
     return;
   }
 
-  if (!translations[lang]) {
+  if (!window.translations[lang]) {
     return;
   }
 
   // Parcourir tous les éléments avec les IDs des traductions
-  Object.keys(translations[lang]).forEach(id => {
+  Object.keys(window.translations[lang]).forEach(id => {
     const element = document.getElementById(id);
     if (element) {
-      element.innerHTML = translations[lang][id];
+      element.innerHTML = window.translations[lang][id];
     }
   });
 }
@@ -70,9 +70,13 @@ function changeLanguage(lang, element) {
   sessionStorage.setItem('preferredLanguage', lang);
 
   // Charger et appliquer les traductions
-  currentLanguage = lang;
+  window.currentLanguage = lang;
   loadTranslations(lang).then(() => {
     applyTranslations(lang);
+    // Update form error messages if the function exists
+    if (window.updateContactFormErrorMessages) {
+      window.updateContactFormErrorMessages();
+    }
   });
 }
 
@@ -83,7 +87,7 @@ function initMultilingual() {
 
   // Charger les traductions pour la langue sauvegardée
   loadTranslations(savedLanguage).then(() => {
-    currentLanguage = savedLanguage;
+    window.currentLanguage = savedLanguage;
 
     // Appliquer les traductions
     if (savedLanguage !== 'EN') {

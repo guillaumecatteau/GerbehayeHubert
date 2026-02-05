@@ -70,15 +70,15 @@
     },
     {
       "id": "h12",
-      "content": "<a href=\"#\">briketpersen</a>"
+      "content": "<a href=\"presses.html\">briketpersen</a>"
     },
     {
       "id": "h13",
-      "content": "<a href=\"#\">afvalpersen</a>"
+      "content": "<a href=\"presses.html\">afvalpersen</a>"
     },
     {
       "id": "h14",
-      "content": "<a href=\"#\">vermalers</a>"
+      "content": "<a href=\"shredders.html\">vermalers</a>"
     },
     {
       "id": "h15",
@@ -86,11 +86,11 @@
     },
     {
       "id": "h16",
-      "content": "Wij leveren u ook oplossingen voor <a href=\"#\">documentvernietiging</a> : vermalers, vernietigers of volledige installaties op maat. Archieven, vertrouwelijke stukken, microfilms en microfiches, bankkaarten, digitaal materiaal, magneetbanden …"
+      "content": "Wij leveren u ook oplossingen voor <a href=\"shredders.html\">documentvernietiging</a> : vermalers, vernietigers of volledige installaties op maat. Archieven, vertrouwelijke stukken, microfilms en microfiches, bankkaarten, digitaal materiaal, magneetbanden …"
     },
     {
       "id": "h17",
-      "content": "Met onze expertise hebben we een antwoord op de meest gespecialiseerde vragen. Wilt u onze expertise en kennis van zaken beter leren kennen? <a href=\"#\">Wij staan voor u klaar !</a>"
+      "content": "Met onze expertise hebben we een antwoord op de meest gespecialiseerde vragen. Wilt u onze expertise en kennis van zaken beter leren kennen? <a href=\"contact.html\">Wij staan voor u klaar !</a>"
     },
     {
       "id": "p1",
@@ -115,6 +115,134 @@
     {
       "id": "p6",
       "content": "Automatische kanaalbalenpers"
+    },
+    {
+      "id": "p7",
+      "content": "Briketpers"
+    },
+    {
+      "id": "s1",
+      "content": "Vermalers"
+    },
+    {
+      "id": "s2",
+      "content": "Vermalers voor alle soorten materialen."
+    },
+    {
+      "id": "s3",
+      "content": "Vermalers met meerdere assen"
+    },
+    {
+      "id": "c1",
+      "content": "Hoe ons bereiken?"
+    },
+    {
+      "id": "successMessage",
+      "content": "Bedankt! Uw bericht is succesvol verzonden."
+    },
+    {
+      "id": "errorFormMessage",
+      "content": "Er is een fout opgetreden bij het verzenden van uw bericht. Probeer het opnieuw."
+    },
+    {
+      "id": "c2",
+      "content": "Voornaam"
+    },
+    {
+      "id": "c3",
+      "content": "Naam"
+    },
+    {
+      "id": "c4",
+      "content": "Bedrijf"
+    },
+    {
+      "id": "c5",
+      "content": "Functie"
+    },
+    {
+      "id": "c6",
+      "content": "E-mailadres"
+    },
+    {
+      "id": "c7",
+      "content": "Telefoon"
+    },
+    {
+      "id": "c8",
+      "content": "Website"
+    },
+    {
+      "id": "c9",
+      "content": "Bericht"
+    },
+    {
+      "id": "submitBtn",
+      "content": "Verzenden"
+    },
+    {
+      "id": "formError_firstName",
+      "content": "Voornaam moet minstens 2 karakters bevatten"
+    },
+    {
+      "id": "formError_lastName",
+      "content": "Achternaam moet minstens 2 karakters bevatten"
+    },
+    {
+      "id": "formError_company",
+      "content": "Voer een bedrijfsnaam in"
+    },
+    {
+      "id": "formError_position",
+      "content": "Voer uw functie in"
+    },
+    {
+      "id": "formError_email",
+      "content": "Voer een geldig e-mailadres in"
+    },
+    {
+      "id": "formError_phone",
+      "content": "Voer een geldig telefoonnummer in"
+    },
+    {
+      "id": "formError_website",
+      "content": "Voer een geldige URL in"
+    },
+    {
+      "id": "formError_message",
+      "content": "Voer een bericht in"
+    },
+    {
+      "id": "c10",
+      "content": "Werkplaats en kantoren"
+    },
+    {
+      "id": "c11",
+      "content": "Rue Germaine Devalet 44<br />7500 DOORNIK<br />BELGIË"
+    },
+    {
+      "id": "c12",
+      "content": "Telefoon : +32 (0)2 351 00 38<br />Fax : +32 (0)2 351 17 52<br />Mobiel : +32 (0)475 474 474"
+    },
+    {
+      "id": "c13",
+      "content": "E-mail : <a href=\"mailto:info.gr@skynet.be\">info.gr@skynet.be</a>"
+    },
+    {
+      "id": "c14",
+      "content": "Hoofdkantoor"
+    },
+    {
+      "id": "c15",
+      "content": "Adolphe Buyllaan 162<br />1050 BRUSSEL<br />BELGIË"
+    },
+    {
+      "id": "c16",
+      "content": "Stuur ons een bericht"
+    },
+    {
+      "id": "c17",
+      "content": "Het bedrijf"
     }
   ]
 }
